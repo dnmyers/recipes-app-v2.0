@@ -1,6 +1,5 @@
 import { selectSearchTerm } from "../searchTerm/searchTermSlice";
 
-/*** Reducer ***/
 const initialFavoriteRecipes = [];
 export const favoriteRecipesReducer = (favoriteRecipes = initialFavoriteRecipes, action) => {
     switch (action.type) {
@@ -15,7 +14,7 @@ export const favoriteRecipesReducer = (favoriteRecipes = initialFavoriteRecipes,
     }
 };
 
-/*** Action Creators ***/
+
 export const addRecipe = (recipe) => {
     return {
         type: 'favoriteRecipes/addRecipe',
@@ -30,7 +29,6 @@ export const removeRecipe = (recipe) => {
     };
 }
 
-/*** Selectors ***/
 export const selectFavoriteRecipes = state => state.favoriteRecipes;
 
 export const selectFilteredFavoriteRecipes = state => {
